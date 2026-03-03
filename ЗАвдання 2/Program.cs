@@ -11,10 +11,10 @@ class Program
         {
             new Dictionary<string, string> { { "V", "S001" } },
             new Dictionary<string, string> { { "V", "S002" } },
-            new Dictionary<string, string> { { "VI", "S001" } },
-            new Dictionary<string, string> { { "VI", "S005" } },
+            new() { { "VI", "S001" } },
+            new() { { "VI", "S005" } },
             new Dictionary<string, string> { { "VII", "S005" } },
-            new Dictionary<string, string> { { "V", "S009" } },
+            new() { { "V", "S009" } },
             new Dictionary<string, string> { { "VIII", "S007" } }
         };
 
@@ -35,8 +35,8 @@ class Program
             { "UniqueValues", uniqueValues }
         };
 
-        JsonSerializerOptions options = new JsonSerializerOptions { };
-        string jsonString = JsonSerializer.Serialize(resultDictionary, options);
+        JsonSerializerOptions options = new JsonSerializerOptions {WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(resultDictionary, options);         //
 
         string filePath = "result.json";
         File.WriteAllText(filePath, jsonString);
