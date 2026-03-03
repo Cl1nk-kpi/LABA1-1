@@ -33,13 +33,6 @@ class Program
         Console.WriteLine("\nНайдовше слово:");
         Console.WriteLine($"Слово: {longestWord} (Довжина: {longestWord.Length})");
 
-
-
-        Console.WriteLine("rfgecnf");
-
-
-        Console.WriteLine("картопля");
-
     }
 }
 
